@@ -15,15 +15,3 @@ management:
     enabled: false
 server:
   port: 8070
-cloud: 
-    consul:
-      host: localhost  
-      port: 8500
-      discovery:
-        enabled: true
-        healthCheckPath: /health
-        healthCheckInterval: 30s
-        ip-address: true
-        instance-id: sc-gateway
-        hostname: localhost
-      enabled: true
