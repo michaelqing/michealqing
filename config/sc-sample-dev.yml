@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    consul:
+      host: localhost  
+      port: 8500
+      discovery:
+        enabled: true
+        healthCheckPath: /health
+        healthCheckInterval: 30s
+        ip-address: true
+        #instance-id: sc-sample
+        instance-id: localhost:${server.port}
+        #service-name: first-service
+        #hostname: localhost
+        hostname: localhost
+      enabled: true
+  application:
+    name: sc-sample
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/scsample?serverTimezone=GMT
+    username: root
+    password: 123456
+server:
+  port: 8081
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  type-aliases-package: com.minstone.sc.sample.domain
+  mapper-locations:
+  - classpath:mapper/*.xml
