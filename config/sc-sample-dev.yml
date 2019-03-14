@@ -1,19 +1,4 @@
 spring:
-  cloud:
-    consul:
-      host: localhost  
-      port: 8500
-      discovery:
-        enabled: true
-        healthCheckPath: /health
-        healthCheckInterval: 30s
-        ip-address: true
-        #instance-id: sc-sample
-        instance-id: localhost:${server.port}
-        #service-name: first-service
-        #hostname: localhost
-        hostname: localhost
-      enabled: true
   application:
     name: sc-sample
   datasource:
