@@ -9,8 +9,20 @@ spring:
     port: 5672
     username: minstone
     password: minstone
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
 server:
   port: 8081
+management:
+  security:
+     enabled: false
+  endpoints: 
+   web:
+      exposure:
+          include: "*"
 feign:
   hystrix:
     enabled: true
