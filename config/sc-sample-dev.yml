@@ -7,8 +7,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: saas-oa
-    password: 123
+    username: minstone
+    password: minstone
 server:
   port: 8081
 feign:
