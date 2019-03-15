@@ -4,6 +4,11 @@ spring:
     url: jdbc:mysql://localhost:3306/scsample?serverTimezone=GMT
     username: root
     password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: minstone
+    password: minstone
 server:
   port: 8081
 management:
