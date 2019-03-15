@@ -4,6 +4,11 @@ spring:
     url: jdbc:mysql://localhost:3306/scsample?serverTimezone=GMT
     username: root
     password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: saas-oa
+    password: 123
 server:
   port: 8081
 feign:
