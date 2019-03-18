@@ -11,6 +11,9 @@ spring:
     password: minstone
   zipkin:
     base-url: http://localhost:20000
+  sleuth:
+    sampler:
+      rate: 1
 server:
   port: 8081
 management:
