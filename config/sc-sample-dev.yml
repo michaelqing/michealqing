@@ -10,7 +10,7 @@ spring:
     username: minstone
     password: minstone
   zipkin:
-    base-url: http://localhost:20000
+    base-url: http://localhost:8080/zipkin/
 server:
   port: 8081
 management:
