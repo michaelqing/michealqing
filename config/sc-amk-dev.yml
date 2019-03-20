@@ -1,1 +1,28 @@
-
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/scsample?serverTimezone=GMT
+    username: root
+    password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: minstone
+    password: minstone
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+server:
+  port: 8085
+management:
+  security:
+     enabled: false
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  type-aliases-package: com.minstone.sc.zmk.domain
+  mapper-locations:
+  - classpath:mapper/*.xml
