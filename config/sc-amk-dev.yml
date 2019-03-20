@@ -1,6 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/scsample?serverTimezone=GMT
     username: root
     password: 123456
