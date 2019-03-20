@@ -25,7 +25,3 @@ management:
 feign:
   hystrix:
     enabled: true
-mybatis:
-  type-aliases-package: com.minstone.sc.zmk.domain
-  mapper-locations:
-  - classpath:mapper/*.xml
