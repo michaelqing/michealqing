@@ -9,6 +9,8 @@ spring:
     port: 5672
     username: minstone
     password: minstone
+    publisher-confirms: true
+    publisher-returns: true
   zipkin:
     base-url: http://localhost:9411
   sleuth:
