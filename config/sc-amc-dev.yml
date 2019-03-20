@@ -25,7 +25,7 @@ spring:
     sampler:
       probability: 1.0
 server:
-  port: 8085
+  port: 8086
 management:
   security:
      enabled: false
