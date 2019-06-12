@@ -24,7 +24,7 @@ spring:
       routes:
       - id: oa-limit-route
         uri: 
-          http://com.minstone.oa
+          http://localhost:8070
         predicates: 
         - Path=/user/**
         filters:
