@@ -23,7 +23,7 @@ spring:
         uri: 
           http://com.minstone.oa
         predicates: 
-        - Path=/oa/**
+        - Path=/user/**
         filters:
         - name: RequestRateLimiter
           args:
