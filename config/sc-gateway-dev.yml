@@ -19,17 +19,17 @@ spring:
   redis: 
     host: localhost
     port: 6379
-  cloud:
-    gateway:
-      routes:
-      - id: userinfo_route
-        uri: 
-          http://localhost:8081/user/account/userinfo/get
-        predicates: 
-        - Path=/user/get
-        filters:
-        - name: RequestRateLimiter
-          args:
-            redis-rate-limiter.replenishRate: 10
-            redis-rate-limiter.burstCapacity: 20
-            key-resolver: "#{@ipKeyResolver}"
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: userinfo_route
+#        uri: 
+#          http://localhost:8081/user/account/userinfo/get
+#        predicates: 
+#        - Path=/user/get
+#        filters:
+#        - name: RequestRateLimiter
+#          args:
+#            redis-rate-limiter.replenishRate: 10
+#            redis-rate-limiter.burstCapacity: 20
+#            key-resolver: "#{@ipKeyResolver}"
