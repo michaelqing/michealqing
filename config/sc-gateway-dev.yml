@@ -15,3 +15,18 @@ management:
     enabled: false
 server:
   port: 8070
+spring: 
+  cloud:
+    gateway:
+      routes:
+      - id: oa-limit-route
+        uri: 
+          http://com.minstone.oa
+        predicates: 
+        - Path=/oa/**
+        filters:
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenishRate: 10
+            redis-rate-limiter.burstCapacity: 20
+            key-resolver: "#{@ipKeyResolver}"
