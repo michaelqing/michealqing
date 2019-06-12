@@ -22,11 +22,11 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: oa-limit-route
+      - id: userinfo_route
         uri: 
-          http://localhost:8070
+          http://localhost:8081/user/account/userinfo/get
         predicates: 
-        - Path=/user/**
+        - Path=/user/get
         filters:
         - name: RequestRateLimiter
           args:
